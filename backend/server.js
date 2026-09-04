@@ -1,0 +1,1 @@
+const express=require('express'); const app=express(); app.use(express.json()); app.get('/api/health',(req,res)=>res.json({status:'operational',services:12,uptime:'99.94%'})); app.get('/api/incidents',(req,res)=>res.json([{id:'INC-2048',severity:'CRITICAL',status:'Investigating'}])); app.listen(5000,()=>console.log('SentinelOps API on 5000'));
